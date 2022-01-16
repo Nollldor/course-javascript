@@ -43,7 +43,7 @@ export default class Review {
   }
 
   onFormKeydown(e) {
-    if (e.keyCode == 27 && this.map.balloonIsOpen()) {
+    if (e.keyCode === 27 && this.map.balloonIsOpen()) {
       this.map.closeBalloon();
     }
   }
