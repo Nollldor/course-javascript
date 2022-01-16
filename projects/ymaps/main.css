@@ -1,0 +1,80 @@
+body,
+html {
+  height: 100%;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.modal {
+  flex: 1;
+  margin: 5px 0px 5px 5px;
+}
+.modal__list {
+  border-bottom: 1px #ccc solid;
+  max-height: 70px;
+  overflow: auto;
+}
+.modal__list--clusterer {
+  border: none;
+}
+.modal__list-item {
+  margin-bottom: 4px;
+}
+.modal__title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.modal__address {
+  width: 308px;
+  font-weight: bold;
+  border-bottom: 1px #ccc solid;
+}
+.modal__text {
+  color: #8F8F8F;
+}
+
+.form {
+  margin-bottom: 10px;
+}
+.form__input {
+  display: block;
+  width: 286px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.form__input--textarea {
+  resize: none;
+  height: 76px;
+  margin-bottom: 15px;
+}
+.form__button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  background: #FF8663;
+  cursor: pointer;
+}
+
+.input-error {
+  border-color: red;
+}
+
+.balloon {
+  width: 308px;
+  display: flex;
+  flex-direction: column;
+}
