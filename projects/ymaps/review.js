@@ -5,6 +5,7 @@ export default class Review {
   constructor() {
     this.map = new Map('map', this.onClick.bind(this));
     this.map.init().then(this.onInit.bind(this));
+    ////localStorage.clear();
   }
 
   onInit() {
@@ -13,10 +14,10 @@ export default class Review {
     dataFromStorage.forEach(item => {
       const filteredData = this.filterCoordsByProperties(this.map.getPlacemarks(), item.coords);
 
-      if (filteredData.length === 0) {
-        this.map.createPlacemark(item);
-      } else {
+      if (filteredData.length > 0) {
         filteredData[0].properties.set({ filteredData: this.filterByCoords(dataFromStorage, item.coords) });
+      } else {
+        this.map.createPlacemark(item);
       }
     });
 
@@ -83,9 +84,9 @@ export default class Review {
 
     const filteredData = this.filterByCoords(this.getData(), coords);
 
-    if (filteredData.length === 0) {
-      this.map.createPlacemark(data);
-    }
+
+    this.map.createPlacemark(data);
+   
 
     this.setData(data);
     this.map.closeBalloon();
