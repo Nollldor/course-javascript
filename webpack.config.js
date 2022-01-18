@@ -70,9 +70,14 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/,
+        test: /\.css$/, 
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
+      {
+        test:  /\.s[ac]ss$/i, 
+        use: [MiniCssExtractPlugin.loader,  'sass-loader'],
+      },
+
     ],
   },
   plugins: [
