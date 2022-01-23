@@ -82,7 +82,7 @@ class Server {
       user = {
         name,
         nick,
-        photo: './src/img/default-photo.svg'
+        photo: './projects/chat/img/default-photo.svg'
       };
     }
 

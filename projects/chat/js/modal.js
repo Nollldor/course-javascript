@@ -1,4 +1,3 @@
-
 export default class Modal {
   constructor(loadPhoto) {
     this.loadPhoto = loadPhoto;
